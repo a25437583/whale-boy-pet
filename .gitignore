@@ -1,0 +1,7 @@
+work/
+assets/previews/
+__pycache__/
+*.pyc
+.DS_Store
+# Release archives are distributed through GitHub Releases.
+dist/*.zip

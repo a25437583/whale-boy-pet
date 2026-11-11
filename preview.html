@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Whale Boy Pet · Animation Preview</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#203453;background:#eef4fb}body{max-width:900px;margin:48px auto;padding:24px}h1{font-size:30px;margin-bottom:8px}.sub{color:#61718b}main{background:#fff;border-radius:24px;padding:30px;box-shadow:0 12px 40px #30508012}.stage{display:grid;place-items:center;height:330px;margin:24px 0;border-radius:16px;background:conic-gradient(#e8edf4 25%,#fff 0 50%,#e8edf4 0 75%,#fff 0) 0 0/24px 24px;overflow:hidden}canvas{width:288px;height:312px}button,select{font:inherit;border:1px solid #c9d7e9;padding:10px 14px;border-radius:10px;background:white;color:#203453}button{cursor:pointer}label{display:inline-flex;align-items:center;gap:8px;margin:6px}footer{margin-top:24px;color:#61718b;font-size:13px}.error{color:#99491c}#meta{min-height:24px}a{color:#2469b4}
+</style>
+<main><h1>Whale Boy Pet</h1><div class="sub">Your little whale-hoodie companion · Animation preview</div>
+<div class="stage"><canvas width="192" height="208" aria-label="Pet animation preview"></canvas></div>
+<label>Animation <select id="state"></select></label><button id="toggle">Pause</button>
+<label>Speed <select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+<label><input type="checkbox" id="follow">Follow the mouse</label><p id="meta" role="status">Loading animations…</p>
+<footer>Code is released under the <a href="LICENSE">MIT License</a>. This preview works offline.</footer></main>
+<script>
+const specs=[['idle','Idle',0,6,[280,110,110,140,140,320]],['running-right','Move right',1,8,[120,120,120,120,120,120,120,220]],['running-left','Move left',2,8,[120,120,120,120,120,120,120,220]],['waving','Wave',3,4,[140,140,140,280]],['jumping','Jump',4,5,[140,140,140,140,280]],['failed','Recover',5,8,[140,140,140,140,140,140,140,240]],['waiting','Wait',6,6,[150,150,150,150,150,260]],['running','Think',7,6,[120,120,120,120,120,220]],['review','Review',8,6,[150,150,150,150,150,280]],['look','Look around',9,16,Array(16).fill(180)]];
+const canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d'),select=document.querySelector('#state'),meta=document.querySelector('#meta'),follow=document.querySelector('#follow');
+specs.forEach(s=>select.add(new Option(s[1],s[0])));const image=new Image();let playing=true,index=0,elapsed=0,last=0,ready=false,direction=null;
+image.onload=()=>{ready=true;meta.textContent='192×208 frames · Choose an animation or turn on mouse following.';};
+image.onerror=()=>{meta.className='error';meta.textContent='Spritesheet not found. Keep the extracted folder structure intact and reopen this page.';};
+image.src='dist/chatgpt/spritesheet.png';select.onchange=()=>{index=0;elapsed=0;};
+document.querySelector('#toggle').onclick=e=>{playing=!playing;e.target.textContent=playing?'Pause':'Play';};
+document.addEventListener('pointermove',e=>{const r=canvas.getBoundingClientRect(),dx=e.clientX-r.left-r.width/2,dy=e.clientY-r.top-r.height/2;direction=Math.hypot(dx,dy)<24?null:Math.round((Math.atan2(dx,-dy)+2*Math.PI)%(2*Math.PI)/(Math.PI/8))%16;});
+function tick(now){const dt=last?Math.min(now-last,250):0;last=now;const s=specs.find(s=>s[0]===select.value);if(playing&&ready){elapsed+=dt*Number(document.querySelector('#speed').value);while(elapsed>=s[4][index]){elapsed-=s[4][index];index=(index+1)%s[3];}}
+let row=s[2],col=index;if(follow.checked&&direction!==null){row=9+Math.floor(direction/8);col=direction%8;}else if(s[0]==='look'){row=9+Math.floor(index/8);col=index%8;}
+ctx.clearRect(0,0,192,208);if(ready)ctx.drawImage(image,col*192,row*208,192,208,0,0,192,208);requestAnimationFrame(tick);}requestAnimationFrame(tick);
+</script>
+</html>

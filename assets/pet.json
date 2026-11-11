@@ -1,0 +1,351 @@
+{
+  "schema": "portable-pet/1",
+  "id": "whale-boy",
+  "name": "Whale Boy Pet",
+  "cellSize": [
+    192,
+    208
+  ],
+  "codeLicense": "MIT",
+  "animations": {
+    "idle": {
+      "loop": true,
+      "frames": [
+        {
+          "file": "frames/idle/00.png",
+          "durationMs": 280
+        },
+        {
+          "file": "frames/idle/01.png",
+          "durationMs": 110
+        },
+        {
+          "file": "frames/idle/02.png",
+          "durationMs": 110
+        },
+        {
+          "file": "frames/idle/03.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/idle/04.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/idle/05.png",
+          "durationMs": 320
+        }
+      ]
+    },
+    "running-right": {
+      "loop": true,
+      "frames": [
+        {
+          "file": "frames/running-right/00.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running-right/01.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running-right/02.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running-right/03.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running-right/04.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running-right/05.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running-right/06.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running-right/07.png",
+          "durationMs": 220
+        }
+      ]
+    },
+    "running-left": {
+      "loop": true,
+      "frames": [
+        {
+          "file": "frames/running-left/00.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running-left/01.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running-left/02.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running-left/03.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running-left/04.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running-left/05.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running-left/06.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running-left/07.png",
+          "durationMs": 220
+        }
+      ]
+    },
+    "waving": {
+      "loop": true,
+      "frames": [
+        {
+          "file": "frames/waving/00.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/waving/01.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/waving/02.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/waving/03.png",
+          "durationMs": 280
+        }
+      ]
+    },
+    "jumping": {
+      "loop": true,
+      "frames": [
+        {
+          "file": "frames/jumping/00.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/jumping/01.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/jumping/02.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/jumping/03.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/jumping/04.png",
+          "durationMs": 280
+        }
+      ]
+    },
+    "failed": {
+      "loop": true,
+      "frames": [
+        {
+          "file": "frames/failed/00.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/failed/01.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/failed/02.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/failed/03.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/failed/04.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/failed/05.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/failed/06.png",
+          "durationMs": 140
+        },
+        {
+          "file": "frames/failed/07.png",
+          "durationMs": 240
+        }
+      ]
+    },
+    "waiting": {
+      "loop": true,
+      "frames": [
+        {
+          "file": "frames/waiting/00.png",
+          "durationMs": 150
+        },
+        {
+          "file": "frames/waiting/01.png",
+          "durationMs": 150
+        },
+        {
+          "file": "frames/waiting/02.png",
+          "durationMs": 150
+        },
+        {
+          "file": "frames/waiting/03.png",
+          "durationMs": 150
+        },
+        {
+          "file": "frames/waiting/04.png",
+          "durationMs": 150
+        },
+        {
+          "file": "frames/waiting/05.png",
+          "durationMs": 260
+        }
+      ]
+    },
+    "running": {
+      "loop": true,
+      "frames": [
+        {
+          "file": "frames/running/00.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running/01.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running/02.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running/03.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running/04.png",
+          "durationMs": 120
+        },
+        {
+          "file": "frames/running/05.png",
+          "durationMs": 220
+        }
+      ]
+    },
+    "review": {
+      "loop": true,
+      "frames": [
+        {
+          "file": "frames/review/00.png",
+          "durationMs": 150
+        },
+        {
+          "file": "frames/review/01.png",
+          "durationMs": 150
+        },
+        {
+          "file": "frames/review/02.png",
+          "durationMs": 150
+        },
+        {
+          "file": "frames/review/03.png",
+          "durationMs": 150
+        },
+        {
+          "file": "frames/review/04.png",
+          "durationMs": 150
+        },
+        {
+          "file": "frames/review/05.png",
+          "durationMs": 280
+        }
+      ]
+    }
+  },
+  "lookDirections": [
+    {
+      "file": "frames/look/00.png",
+      "degreesClockwiseFromUp": 0.0
+    },
+    {
+      "file": "frames/look/01.png",
+      "degreesClockwiseFromUp": 22.5
+    },
+    {
+      "file": "frames/look/02.png",
+      "degreesClockwiseFromUp": 45.0
+    },
+    {
+      "file": "frames/look/03.png",
+      "degreesClockwiseFromUp": 67.5
+    },
+    {
+      "file": "frames/look/04.png",
+      "degreesClockwiseFromUp": 90.0
+    },
+    {
+      "file": "frames/look/05.png",
+      "degreesClockwiseFromUp": 112.5
+    },
+    {
+      "file": "frames/look/06.png",
+      "degreesClockwiseFromUp": 135.0
+    },
+    {
+      "file": "frames/look/07.png",
+      "degreesClockwiseFromUp": 157.5
+    },
+    {
+      "file": "frames/look/08.png",
+      "degreesClockwiseFromUp": 180.0
+    },
+    {
+      "file": "frames/look/09.png",
+      "degreesClockwiseFromUp": 202.5
+    },
+    {
+      "file": "frames/look/10.png",
+      "degreesClockwiseFromUp": 225.0
+    },
+    {
+      "file": "frames/look/11.png",
+      "degreesClockwiseFromUp": 247.5
+    },
+    {
+      "file": "frames/look/12.png",
+      "degreesClockwiseFromUp": 270.0
+    },
+    {
+      "file": "frames/look/13.png",
+      "degreesClockwiseFromUp": 292.5
+    },
+    {
+      "file": "frames/look/14.png",
+      "degreesClockwiseFromUp": 315.0
+    },
+    {
+      "file": "frames/look/15.png",
+      "degreesClockwiseFromUp": 337.5
+    }
+  ]
+}
